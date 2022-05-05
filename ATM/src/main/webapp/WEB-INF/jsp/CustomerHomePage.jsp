@@ -164,7 +164,7 @@
     <div class="column">
     	<a href="/deposit">
         <button class="my-button1">DEPOSIT</button></a>
-        <a href="/withdraw">
+        <a href="/checkbal">
         <button class="my-button2">WITHDRAW</button></a>
     </div>
   
