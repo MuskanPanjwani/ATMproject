@@ -20,6 +20,12 @@ public class MainController {
     public String button2() {
         return "button2";
     }
+    
+    @RequestMapping("/checkbal")
+    public String checkbal() {
+        return "checkbal";
+    }
+    
     @RequestMapping("/index")
     public String index2() {
         return "index";
