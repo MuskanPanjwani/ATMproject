@@ -75,6 +75,11 @@ public class MainController {
         return "withdraw";
     }
     
+    @RequestMapping("/withdrawal2")
+    public String withdrawal2() {
+        return "withdrawal2";
+    }
+    
     @RequestMapping("/fastcashwithdraw")
     public String fastcashwithdraw() {
         return "fastcashwithdraw";
