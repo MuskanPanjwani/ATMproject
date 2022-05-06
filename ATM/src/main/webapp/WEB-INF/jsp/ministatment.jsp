@@ -6,19 +6,30 @@ String username = "root";
 String password = "muskan"; /*root user's password needs to be written here*/
 Connection conn = null;
 PreparedStatement stmt = null;
-PreparedStatement stmt2 = null;
+PreparedStatement stmt3 = null;
 ResultSet rs = null;
 ResultSet rs2 = null;
 String url = "jdbc:mysql://localhost:3306/AtmDatabase";
 String uid = (String)session.getAttribute("userid");
 String cid = (String)session.getAttribute("customerid");
-int i=1;
-int count =0;
+int i=1,j=0;
+int count=0;
 try{
 	Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 	conn = DriverManager.getConnection(url, username, password);
+	stmt3 = conn.prepareStatement("Select * from bank_transaction where customerid='"+cid+"';");
+    rs2 = stmt3.executeQuery();
+    while(rs2.next())
+    {
+    	j=j+1;
+    }
+    count = j-5;
 	stmt = conn.prepareStatement("select * from bank_transaction where customerid='"+cid+"';");
 	rs = stmt.executeQuery();
+	for(int k = 1;k<=count;k++)
+	{
+		rs.next();
+	}
 	while(rs.next()){%>
 	<tr><td><%=i%></td>
 		<td><%=rs.getString("transactionid")%></td>
