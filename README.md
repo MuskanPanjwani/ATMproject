@@ -3,5 +3,3 @@
 
 ## Requirments
 The system will be developed on a Windows machine using J2EE, JSP/HTML, and JDBC. 
-
-w![Login](https://user-images.githubusercontent.com/47729985/167256948-b3a80b9d-9921-4c6d-9c0f-cc0a464b933f.jpg)
